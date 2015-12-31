@@ -1,0 +1,28 @@
+<assembly>
+    <id>bin</id>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <dependencySets>
+        <dependencySet>
+            <useProjectArtifact>true</useProjectArtifact>
+            <outputDirectory>lib</outputDirectory>
+        </dependencySet>
+    </dependencySets>
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.directory}/classes/</directory>
+            <outputDirectory>/conf</outputDirectory>
+            <includes>
+                <include>*.xml</include>
+                <include>*.properties</include>
+                <include>*.json</include>
+                <include>/*/*.properties</include>
+                <include>/*/*.xml</include>
+                <!-- include sample json -->
+                <include>/*/*.json</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>
